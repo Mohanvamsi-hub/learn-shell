@@ -1,17 +1,13 @@
-variable "inst_type" {}
+variable "inst_type" {
+  default = "t3.small"
+}
 variable "nameofservers" {}
-
-inst_type = "t3.small"
 
 nameofservers = {
   mysql = {
     name      = "mysql"
     passsword = "RoboShop@1"
   }
-}
-
-data "aws_security_group" "allow-all" {
-  name = "allow-all"
 }
 
 data "aws_ami" "centos_user" {
