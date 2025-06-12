@@ -1,4 +1,5 @@
 variable "inst_type" {}
+
 variable "nameofservers" {}
 
 inst_type = "t3.small"
