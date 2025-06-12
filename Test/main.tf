@@ -10,6 +10,9 @@ terraform {
 variable "nameofservers" {}
 
 nameofservers = {
+  frontend = {
+    name = "frontend"
+  }
   mysql = {
     name = "mysql"
     passsword = "RoboShop@1"
@@ -25,7 +28,7 @@ resource "null_resource" "blank" {
       "git clone https://github.com/Mohanvamsi-hub/roboshop-shell.git",
       "cd roboshop-shell",
       "echo ${each.value["name"]}.sh  ${lookup(each.value,"password","null")}",
-      "sudo bash ${each.value["name"]}.sh  ${lookup(each.value,"password","null")}"
+      #"sudo bash ${each.value["name"]}.sh  ${lookup(each.value,"password","null")}"
     ]
   }
 }
