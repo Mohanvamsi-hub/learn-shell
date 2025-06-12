@@ -48,7 +48,6 @@ resource "aws_route53_record" "records" {
 
 
 resource "null_resource" "followupresource" {
-
   depends_on = [aws_instance.ec2name, aws_route53_record.records]
   for_each = var.nameofservers
   connection {
