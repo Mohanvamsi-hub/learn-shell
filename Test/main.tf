@@ -9,15 +9,6 @@ terraform {
 
 variable "nameofservers" {}
 
-nameofservers = {
-  frontend = {
-    name = "frontend"
-  }
-  mysql = {
-    name = "mysql"
-    passsword = "RoboShop@1"
-  }
-}
 
 
 resource "null_resource" "blank" {
