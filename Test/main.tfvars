@@ -8,4 +8,3 @@ nameofservers = {
   }
 }
 
-env = "dev"
