@@ -46,7 +46,6 @@ resource "aws_route53_record" "records" {
   records = [aws_instance.ec2name[each.value["name"]].private_ip]
 }
 
-
 resource "null_resource" "followupresource" {
   depends_on = [aws_instance.ec2name, aws_route53_record.records]
   for_each = var.nameofservers
