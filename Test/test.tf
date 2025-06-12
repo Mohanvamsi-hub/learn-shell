@@ -1,7 +1,5 @@
-variable "inst_type" {
-  default = "t3.small"
-}
-variable "nameofservers" {}
+
+inst_type = "t3.small"
 
 nameofservers = {
   mysql = {
@@ -9,6 +7,7 @@ nameofservers = {
     passsword = "RoboShop@1"
   }
 }
+
 
 data "aws_ami" "centos_user" {
   most_recent = true
