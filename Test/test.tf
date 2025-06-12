@@ -1,12 +1,4 @@
 
-inst_type = "t3.small"
-
-nameofservers = {
-  mysql = {
-    name      = "mysql"
-    passsword = "RoboShop@1"
-  }
-}
 
 
 data "aws_ami" "centos_user" {
